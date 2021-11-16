@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{25C73A0A-97D1-32E7-2C86-7991F653A15E}</ProjectGuid>
+    <ProjectGuid>{5A100F91-E120-6517-A3E2-2C4E9483E580}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,14 +53,10 @@
     <UnityVersion>2020.3.17f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Prefabs\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonMotor.cs" />
     <Compile Include="Assets\Materials\Flocking\scripts\GameManager.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\FirstPersonMovement.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Zoom.cs" />
-    <Compile Include="Assets\Scripts\Food_Sys.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\FirstPersonAudio.cs" />
     <Compile Include="Assets\Scripts\Sheep_Transform.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
@@ -100,6 +96,7 @@
     <Compile Include="Assets\Materials\Flocking\scripts\UiManager.cs" />
     <Compile Include="Assets\Scripts\SheepCollider.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\GroundCheck.cs" />
+    <Compile Include="Assets\Scripts\Water_Sys.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\Flocking\Resources\default.xml" />
@@ -699,39 +696,39 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.VisualEffectGraph.Runtime.csproj">
-      <Project>{5A17E02A-0BF4-61EA-2197-516B9E3075F5}</Project>
+      <Project>{AE9C5ECF-EAB8-5CE4-1BFA-EEA7E5234D5D}</Project>
       <Name>Unity.VisualEffectGraph.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{CAB90358-3024-4E22-EE4F-FEABD9FA0DD0}</Project>
+      <Project>{ECC7D501-0F58-F17C-B06A-1325EC347198}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{E1EDD979-01D2-453B-DF4F-60B638B7EB83}</Project>
+      <Project>{336AE8C4-2BF0-0FA7-2BC1-0BFDFC211302}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{020A8932-3114-D0DD-F57F-4A87CBF37024}</Project>
+      <Project>{F9DC55C9-A5B2-067D-FDCE-E3DC29D04890}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.csproj">
-      <Project>{F3B61649-DD35-BE1F-72DD-86862FAB50A3}</Project>
+      <Project>{820A001E-B704-96FB-C266-116A7D8D4FDC}</Project>
       <Name>Unity.ProBuilder</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{426DDBC8-D3E7-0756-3CDA-85D105C50CFB}</Project>
+      <Project>{5903A5D2-B616-888A-DE13-9CD50AEE591C}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{34CE9F76-0D0E-95B6-14EA-85691AE2CB14}</Project>
+      <Project>{3F0AC4D3-C5AB-D139-1FAB-BAB5F1D2C2DA}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{FBB726B8-B488-28D3-36AD-2C5A4A4040EB}</Project>
+      <Project>{5E9638A1-DD16-0CF8-3274-43F3AD56E204}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProGrids.csproj">
-      <Project>{25303C77-3631-7B95-9325-96D6A91CEC63}</Project>
+      <Project>{94F2DC36-4966-A3A5-43FC-45968FA056FB}</Project>
       <Name>Unity.ProGrids</Name>
     </ProjectReference>
   </ItemGroup>

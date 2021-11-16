@@ -1,3 +1,8 @@
+
+
+
+
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +19,7 @@ public class NPC_Follow : MonoBehaviour
     public Player follow;
     //bool to check if sheep are eating
     public Eat_Sys eat;
+    public Water_Sys drink;
     public Sheep1Health sheep1health;
     public bool Starving = false;
     public bool Thirsty = false;
@@ -22,6 +28,7 @@ public class NPC_Follow : MonoBehaviour
     public int food = 100;
     [Tooltip("Amount of thirst")]
     public int water = 100;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +39,7 @@ public class NPC_Follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (eat.eating == false)
+        if (water <= 40 || food <= 80)
         {
             //checks if sheep should follow player or not
             if (follow.followplayer == true)
@@ -50,30 +57,33 @@ public class NPC_Follow : MonoBehaviour
 
     public void GetFood(GameObject FoundFood, float distance)
     {
-        if(food <= 80)
+        if (food <= 80 && drink.drinking == false)
         {
             agent.destination = FoundFood.transform.position;
         }
     }
     public void IncreaseHunger()
     {
-        food--;
-        if (food < 0)
-            food = 0;
-
-        if (food == 0)
+        if (eat.eating == false)
         {
-            Starving = true;
+            food--;
+            if (food < 0)
+                food = 0;
+
+            if (food == 0)
+            {
+                Starving = true;
+            }
+            //if (sheep1health.currentHealth == 0)
+            // {
+            //     Dead = true;
+            // }
         }
-        //if (sheep1health.currentHealth == 0)
-       // {
-       //     Dead = true;
-       // }
     }
 
     public void GetWater(GameObject FoundWater, float distance)
     {
-        if (water <= 40)
+        if (water <= 40 && eat.eating == false)
         {
             agent.destination = FoundWater.transform.position;
         }
@@ -81,22 +91,26 @@ public class NPC_Follow : MonoBehaviour
 
     public void IncreaseWater()
     {
-        water--;
-        if (water < 0)
-            water = 0;
-
-        if (water == 0)
+        if (drink.drinking == false)
         {
-            Thirsty = true;
-        }
+            water--;
+            if (water < 0)
+                water = 0;
 
-        //this will affect the sheep stamina
-        //if (sheep1health.currentHealth == 0)
-        // {
-        //     Dead = true;
-        // }
+            if (water == 0)
+            {
+                Thirsty = true;
+            }
+
+            //this will affect the sheep stamina
+            //if (sheep1health.currentHealth == 0)
+            // {
+            //     Dead = true;
+            // }
+        }
     }
 }
 
 
 // https://sharpcoderblog.com/blog/npc-follow-player-in-unity-3d //
+

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{282C7A74-72BE-0ED6-3C2F-BC6908CEE033}</ProjectGuid>
+    <ProjectGuid>{9EC4BB24-A425-9251-5514-E876765C9531}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ProBuilder.Editor</AssemblyName>
@@ -52,9 +52,6 @@
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.17f1</UnityVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\Editor\EditorCore\RepairActions.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\Editor\EditorCore\UnwrapParametersEditor.cs" />
@@ -824,39 +821,39 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.ProBuilder.csproj">
-      <Project>{F3B61649-DD35-BE1F-72DD-86862FAB50A3}</Project>
+      <Project>{820A001E-B704-96FB-C266-116A7D8D4FDC}</Project>
       <Name>Unity.ProBuilder</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
-      <Project>{610799D4-AD69-204A-357B-071ADEB8B168}</Project>
+      <Project>{14B2D3E5-F5BB-0565-6A30-455CAB79801D}</Project>
       <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.Stl.csproj">
-      <Project>{CEEB5245-7F53-C4EA-7BB4-E800BBC106FB}</Project>
+      <Project>{51CFB7A8-E0AD-80AC-4CBD-DE14DDB4D77A}</Project>
       <Name>Unity.ProBuilder.Stl</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Settings.Editor.csproj">
-      <Project>{68C5392F-059E-46DF-A37B-5C378F939088}</Project>
+      <Project>{19963DAC-4446-3E29-0A7B-6F99630D18A2}</Project>
       <Name>Unity.Settings.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.Csg.csproj">
-      <Project>{A7076E16-F22E-D315-5E3D-8BBA290D3C84}</Project>
+      <Project>{48CFED21-43BC-848F-12CE-41ED7B20F948}</Project>
       <Name>Unity.ProBuilder.Csg</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{5D64D17E-FE58-C4D3-24F8-93031F75B36F}</Project>
+      <Project>{819632CB-483C-4E84-20EF-961588405836}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{34CE9F76-0D0E-95B6-14EA-85691AE2CB14}</Project>
+      <Project>{3F0AC4D3-C5AB-D139-1FAB-BAB5F1D2C2DA}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{6F319923-1E9D-7666-CFCA-BD9D2DCF3E45}</Project>
+      <Project>{FD6BA78E-AE2B-20F5-F26C-52026535095E}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{04A8507D-7182-04C7-76B2-4967A245A1A7}</Project>
+      <Project>{B3B89AAC-0154-AE3B-9A3E-D6AADCBC29F4}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

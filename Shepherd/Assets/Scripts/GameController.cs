@@ -1,3 +1,7 @@
+
+
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +15,10 @@ public class GameController : MonoBehaviour
     //Reference to npc_follow
     public NPC_Follow sheepfd;
     [Tooltip("Rate in seconds in which the hunger increases")]
-    public float HungerRate = 0.5f;
-    public float WaterRate = 0.5f;
+    public float HungerRate = .5f;
+    public float WaterRate = .5f;
 
-    
+
 
     public Sheep1Health sheep1health;
 
@@ -48,7 +52,7 @@ public class GameController : MonoBehaviour
     {
         for (int i = 0; i < Sheep.Count; i++)
         {
-            Sheep[i].IncreaseHunger();
+            Sheep[i].IncreaseWater();
         }
     }
 

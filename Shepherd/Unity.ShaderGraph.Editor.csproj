@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6B968B8B-037F-F002-58D7-88FE80601DBC}</ProjectGuid>
+    <ProjectGuid>{F56D8E57-472B-374A-8AE5-D3F0B3E72F96}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ShaderGraph.Editor</AssemblyName>
@@ -52,9 +52,6 @@
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.17f1</UnityVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\Math\Advanced\LengthNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\Input\Texture\SampleTexture2DNode.cs" />
@@ -1315,31 +1312,31 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.ShaderGraph.Utilities.csproj">
-      <Project>{3935E354-3B1E-465D-DB17-1F0EDBC697E0}</Project>
+      <Project>{5E97BFFA-953D-F133-E568-6C2A6D83A38B}</Project>
       <Name>Unity.ShaderGraph.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Searcher.Editor.csproj">
-      <Project>{B5F89CFB-EA82-FBD8-49EA-8D360F2D1850}</Project>
+      <Project>{5E133D32-95D9-BA05-4F07-EFFEED8A2866}</Project>
       <Name>Unity.Searcher.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{020A8932-3114-D0DD-F57F-4A87CBF37024}</Project>
+      <Project>{F9DC55C9-A5B2-067D-FDCE-E3DC29D04890}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{5D64D17E-FE58-C4D3-24F8-93031F75B36F}</Project>
+      <Project>{819632CB-483C-4E84-20EF-961588405836}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{34CE9F76-0D0E-95B6-14EA-85691AE2CB14}</Project>
+      <Project>{3F0AC4D3-C5AB-D139-1FAB-BAB5F1D2C2DA}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{6F319923-1E9D-7666-CFCA-BD9D2DCF3E45}</Project>
+      <Project>{FD6BA78E-AE2B-20F5-F26C-52026535095E}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{04A8507D-7182-04C7-76B2-4967A245A1A7}</Project>
+      <Project>{B3B89AAC-0154-AE3B-9A3E-D6AADCBC29F4}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
