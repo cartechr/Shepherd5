@@ -69,6 +69,7 @@
     <Compile Include="Assets\Desert Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
     <Compile Include="Assets\Scripts\Sheep_Script.cs" />
     <Compile Include="Assets\Prefabs\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonAnimator.cs" />
+    <Compile Include="Assets\Scripts\Water_Sys.cs" />
     <Compile Include="Assets\Scripts\Detect_Enemy_Script.cs" />
     <Compile Include="Assets\Prefabs\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonInput.cs" />
     <Compile Include="Assets\Materials\Flocking\scripts\XmlScripts\XmlReadWrite.cs" />
@@ -96,7 +97,6 @@
     <Compile Include="Assets\Materials\Flocking\scripts\UiManager.cs" />
     <Compile Include="Assets\Scripts\SheepCollider.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\GroundCheck.cs" />
-    <Compile Include="Assets\Scripts\Water_Sys.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\Flocking\Resources\default.xml" />
@@ -753,9 +753,17 @@
       <Project>{F56D8E57-472B-374A-8AE5-D3F0B3E72F96}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.TerrainTools.csproj">
+      <Project>{C5D4A826-A82F-B60D-9914-C57CC9768118}</Project>
+      <Name>Unity.TerrainTools</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
       <Project>{14B2D3E5-F5BB-0565-6A30-455CAB79801D}</Project>
       <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TerrainTools.Editor.csproj">
+      <Project>{0D43CEED-264A-8421-A19B-2B724CD56E68}</Project>
+      <Name>Unity.TerrainTools.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
       <Project>{5E9638A1-DD16-0CF8-3274-43F3AD56E204}</Project>
