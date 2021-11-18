@@ -13,7 +13,6 @@ public class GameController : MonoBehaviour
     [SerializeField] List<GameObject> Water;
     static GameController _instance;
     //Reference to npc_follow
-    public NPC_Follow sheepfd;
     [Tooltip("Rate in seconds in which the hunger increases")]
     public float HungerRate = .5f;
     public float WaterRate = .5f;

@@ -1,8 +1,3 @@
-
-
-
-
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -24,10 +19,14 @@ public class NPC_Follow : MonoBehaviour
     public bool Starving = false;
     public bool Thirsty = false;
     public bool Dead = false;
-    [Tooltip("Amount of food")]
+    [Tooltip("Amount of food left")]
     public int food = 100;
+    [Tooltip("Health Capacity of Food")]
+    public int max_food_cap;
     [Tooltip("Amount of thirst")]
     public int water = 100;
+    [Tooltip("Health Capacity of Water")]
+    public int max_water_cap;
 
 
     // Start is called before the first frame update
@@ -39,7 +38,7 @@ public class NPC_Follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (water <= 40 || food <= 80)
+        if (water >= 40 || food >= 80)
         {
             //checks if sheep should follow player or not
             if (follow.followplayer == true)
