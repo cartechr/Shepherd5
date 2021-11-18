@@ -22,7 +22,7 @@ public class NPC_Follow : MonoBehaviour
     [Tooltip("Amount of food left")]
     public int food = 100;
     [Tooltip("Health Capacity of Food")]
-    public int max_food_cap;
+    public int max_food_cap = 150;
     [Tooltip("Amount of thirst")]
     public int water = 100;
     [Tooltip("Health Capacity of Water")]
