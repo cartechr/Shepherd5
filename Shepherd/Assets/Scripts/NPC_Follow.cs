@@ -56,9 +56,14 @@ public class NPC_Follow : MonoBehaviour
 
     public void GetFood(GameObject FoundFood, float distance)
     {
-        if (food <= 80 && drink.drinking == false)
+        if (food <= 80 && drink.drinking == false && eat.EatTime > 0)
         {
             agent.destination = FoundFood.transform.position;
+        }
+        if (eat.EatTime == 0 && drink.drinking == false)
+        {
+            agent.destination = transformToFollow.position;
+            Debug.Log("Eat timer is done");
         }
     }
     public void IncreaseHunger()
@@ -82,9 +87,14 @@ public class NPC_Follow : MonoBehaviour
 
     public void GetWater(GameObject FoundWater, float distance)
     {
-        if (water <= 40 && eat.eating == false)
+        if (water <= 40 && eat.eating == false && drink.WaterTime > 0)
         {
             agent.destination = FoundWater.transform.position;
+        }
+        if (drink.WaterTime == 0 && eat.eating == false)
+        {
+            agent.destination = transformToFollow.position;
+            Debug.Log("Drink timer is done");
         }
     }
 
