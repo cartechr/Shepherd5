@@ -7,6 +7,8 @@ public class Eat_Sys : MonoBehaviour
     public bool eating = false;
     public float EatTime = 10f;
     bool foodtimer = false;
+    public NPC_Follow checkforeating;
+
     //food
     public NPC_Follow f;
 
@@ -18,9 +20,12 @@ public class Eat_Sys : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Sheep"))
         {
-            Debug.Log("Sheep are eating");
-            eating = true;
-            foodtimer = true;
+            if (checkforeating.food == 0)
+            {
+                Debug.Log("Sheep are eating");
+                eating = true;
+                foodtimer = true;
+            }
         }
     }
     private void Update()

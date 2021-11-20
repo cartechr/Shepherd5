@@ -27,6 +27,8 @@ public class NPC_Follow : MonoBehaviour
     public int water = 100;
     [Tooltip("Health Capacity of Water")]
     public int max_water_cap;
+    //check if sheep are following player
+    public bool sheepwithplayer = true;
 
 
     // Start is called before the first frame update
@@ -59,11 +61,14 @@ public class NPC_Follow : MonoBehaviour
         if (food <= 80 && drink.drinking == false && eat.EatTime > 0)
         {
             agent.destination = FoundFood.transform.position;
+            sheepwithplayer = false;
         }
         if (eat.EatTime == 0 && drink.drinking == false)
         {
             agent.destination = transformToFollow.position;
             Debug.Log("Eat timer is done");
+            sheepwithplayer = true;
+            food = 100;
         }
     }
     public void IncreaseHunger()
@@ -90,11 +95,14 @@ public class NPC_Follow : MonoBehaviour
         if (water <= 40 && eat.eating == false && drink.WaterTime > 0)
         {
             agent.destination = FoundWater.transform.position;
+            sheepwithplayer = false;
         }
         if (drink.WaterTime == 0 && eat.eating == false)
         {
             agent.destination = transformToFollow.position;
             Debug.Log("Drink timer is done");
+            sheepwithplayer = true;
+            water = 100;
         }
     }
 
