@@ -7,7 +7,6 @@ public class Water_Sys : MonoBehaviour
     public bool drinking = false;
     public float WaterTime = 10f;
     bool watertimer = false;
-    public NPC_Follow checkfordrinking;
 
     private void Start()
     {
@@ -16,11 +15,8 @@ public class Water_Sys : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         Debug.Log("Sheep are drinking");
-        if (checkfordrinking.water == 80)
-        {
-            drinking = true;
-            watertimer = true;
-        }
+        drinking = true;
+        watertimer = true;
     }
 
     private void Update()
@@ -30,6 +26,7 @@ public class Water_Sys : MonoBehaviour
             WaterTime -= Time.deltaTime;
             if (WaterTime <= 0)
             {
+                drinking = false;
                 watertimer = false;
                 WaterTime = 0;
             }

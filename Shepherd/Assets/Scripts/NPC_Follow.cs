@@ -27,8 +27,6 @@ public class NPC_Follow : MonoBehaviour
     public int water = 100;
     [Tooltip("Health Capacity of Water")]
     public int max_water_cap;
-    //check if sheep are following player
-    public bool sheepwithplayer = true;
 
 
     // Start is called before the first frame update
@@ -40,7 +38,7 @@ public class NPC_Follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (water >= 40 || food >= 80)
+        if (water > 40 || food > 80)
         {
             //checks if sheep should follow player or not
             if (follow.followplayer == true)
@@ -61,13 +59,11 @@ public class NPC_Follow : MonoBehaviour
         if (food <= 80 && drink.drinking == false && eat.EatTime > 0)
         {
             agent.destination = FoundFood.transform.position;
-            sheepwithplayer = false;
         }
         if (eat.EatTime == 0 && drink.drinking == false)
         {
             agent.destination = transformToFollow.position;
             Debug.Log("Eat timer is done");
-            sheepwithplayer = true;
             food = 100;
         }
     }
@@ -92,17 +88,9 @@ public class NPC_Follow : MonoBehaviour
 
     public void GetWater(GameObject FoundWater, float distance)
     {
-        if (water <= 40 && eat.eating == false && drink.WaterTime > 0)
+        if (water <= 80 && eat.eating == false && drink.WaterTime > 0)
         {
             agent.destination = FoundWater.transform.position;
-            sheepwithplayer = false;
-        }
-        if (drink.WaterTime == 0 && eat.eating == false)
-        {
-            agent.destination = transformToFollow.position;
-            Debug.Log("Drink timer is done");
-            sheepwithplayer = true;
-            water = 100;
         }
     }
 
@@ -114,10 +102,10 @@ public class NPC_Follow : MonoBehaviour
             if (water < 0)
                 water = 0;
 
-            if (water == 0)
-            {
-                Thirsty = true;
-            }
+          //  if (water == 0)
+          //  {
+           //     Thirsty = true;
+           // }
 
             //this will affect the sheep stamina
             //if (sheep1health.currentHealth == 0)

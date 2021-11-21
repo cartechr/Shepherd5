@@ -11,12 +11,12 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (followplayer == true && check.sheepwithplayer == true)
+            if (followplayer == true)
             {
                 followplayer = false;
                 Debug.Log("Stop Following Player");
             }
-            if (followplayer == false && check.sheepwithplayer == true)
+            if (followplayer == false)
             {
                 followplayer = true;
                 Debug.Log("Follow Player");
