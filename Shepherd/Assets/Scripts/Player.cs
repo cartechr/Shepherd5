@@ -5,22 +5,15 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public bool followplayer = true;
-    public NPC_Follow check;
+    //public NPC_Follow check;
     // Update is called once per frame
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (followplayer == true)
-            {
-                followplayer = false;
-                Debug.Log("Stop Following Player");
-            }
-            if (followplayer == false)
-            {
-                followplayer = true;
-                Debug.Log("Follow Player");
-            }
+            Debug.Log("Pressed F");
+            // Toggle for followplayer.
+            followplayer = !followplayer;
         }
     }
 }
