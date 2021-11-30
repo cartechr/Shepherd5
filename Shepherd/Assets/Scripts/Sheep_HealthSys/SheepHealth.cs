@@ -1,27 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SheepHealth : MonoBehaviour
 {
-    public int maxHealth = 10;
+    public int maxHealth;
     public int currentHealth;
+    private NavMeshAgent nav;
 
 
-    // MAIN FUNCTIONS
-    public float sheep1Stamina = 0f;
-    public float maxsheep1Stamina = 0f;
+    // MAIN PROPERTIES
+    public float sheepStamina;
+    public float maxSheepStamina;
     [HideInInspector] public bool hasRegenerated = true;
-    [HideInInspector] public bool weareSprinting = false;
+    [HideInInspector] public bool moving = false;
 
-    // REGEN FUNCTIONS
-    [Range(0, 50)] [SerializeField] private float staminaDrain = 0f;
-    [Range(0, 50)] [SerializeField] private float staminaRegen = 0f;
+    // REGEN PROPERTIES
+    [Range(0, 50)] [SerializeField] private float staminaDrain;
+    [Range(0, 50)] [SerializeField] private float staminaRegen;
 
-    // SPEED FUNCTIONS
-    [SerializeField] private float slowedSpeed = 0;
-    [SerializeField] private float normalSpeed = 0;
+    // SPEED PROPERTIES
+    [SerializeField] private float slowedSpeed;
+    [SerializeField] private float normalSpeed;
 
+    private void Awake()
+    {
+        nav = GetComponent<NavMeshAgent>();
+        nav.speed = normalSpeed;
+    }
     void Start()
     {
         //currentHealth = maxHealth;
@@ -50,29 +57,51 @@ public class SheepHealth : MonoBehaviour
 
     private void Update()
     {
-        if (!weareSprinting)
+        if (!moving)
         {
-            if (sheep1Stamina <= maxsheep1Stamina - 0.01)
+            if (sheepStamina <= maxSheepStamina - 0.01)
             {
-                sheep1Stamina += staminaRegen * Time.deltaTime;
+                sheepStamina += staminaRegen * Time.deltaTime;
                 //UpdateStamina
 
-                if (sheep1Stamina >= maxsheep1Stamina)
+                if (sheepStamina >= maxSheepStamina)
                 {
                     //set to normal speed
                     hasRegenerated = true;
                 }
             }
         }
+        IsMoving();
+        Moving();
+        DetermineSpeed();
     }
 
-    public void Sprinting()
+    public void Moving()
     {
-        if (hasRegenerated)
+        if (hasRegenerated && moving)
         {
-            weareSprinting = true;
-            sheep1Stamina -= staminaDrain * Time.deltaTime;
+            sheepStamina -= staminaDrain * Time.deltaTime;
+        }
+    }
 
+    public void IsMoving()
+    {
+        if (nav.isStopped)
+        {
+            moving = false;
+        }
+        else moving = true;
+    }
+
+    public void DetermineSpeed()
+    {
+        if (sheepStamina <= 0)
+        {
+            nav.speed = slowedSpeed;
+        }
+        else if (sheepStamina >= maxSheepStamina && hasRegenerated)
+        {
+            nav.speed = normalSpeed;
         }
     }
 

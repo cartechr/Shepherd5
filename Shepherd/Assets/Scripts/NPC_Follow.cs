@@ -15,7 +15,7 @@ public class NPC_Follow : MonoBehaviour
     //bool to check if sheep are eating
     public Eat_Sys eat;
     public Water_Sys drink;
-    public Sheep1Health sheep1health;
+    public SheepHealth sheepHealth;
     public bool Starving = false;
     public bool Thirsty = false;
     public bool Dead = false;
@@ -29,6 +29,10 @@ public class NPC_Follow : MonoBehaviour
     public int max_water_cap;
 
 
+    private void Awake()
+    {
+        sheepHealth = GetComponent<SheepHealth>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -88,9 +92,16 @@ public class NPC_Follow : MonoBehaviour
 
     public void GetWater(GameObject FoundWater, float distance)
     {
-        if (water <= 80 && eat.eating == false && drink.WaterTime > 0)
+        if (water <= 40 && eat.eating == false && drink.WaterTime > 0)
         {
             agent.destination = FoundWater.transform.position;
+
+        }
+        if (drink.WaterTime == 0 && eat.eating == false)
+        {
+            agent.destination = transformToFollow.position;
+            Debug.Log("Drink timer is done");
+            water = 100;
         }
     }
 
