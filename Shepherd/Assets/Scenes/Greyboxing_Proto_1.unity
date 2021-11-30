@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.63855284, g: 0.6146829, b: 0.42541602, a: 1}
+  m_IndirectSpecularColor: {r: 0.63855237, g: 0.61468285, b: 0.42541605, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc3435e8afce764cb8f64c63da05fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sheep1health: {fileID: 369369493}
+  sheep1health: {fileID: 0}
   fillImage: {fileID: 1266339275}
 --- !u!4 &33432873 stripped
 Transform:
@@ -665,6 +665,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
+  sheep1Stamina: 200
+  maxsheep1Stamina: 200
+  hasRegenerated: 1
+  weareSprinting: 0
+  staminaDrain: 0.5
+  staminaRegen: 0.5
+  slowedSpeed: 4
+  normalSpeed: 8
 --- !u!195 &84025261
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -740,6 +748,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &84025265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84025259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e7b0936cd9a8341a5bac8327c0f57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 70
+  currentHealth: 70
+  sheep1Stamina: 70
+  maxsheep1Stamina: 70
+  hasRegenerated: 1
+  weareSprinting: 0
+  staminaDrain: 0.8
+  staminaRegen: 0.5
+  slowedSpeed: 7
+  normalSpeed: 10
 --- !u!1001 &91640543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1012,7 +1042,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 24.32, y: -71.7, z: 0}
 --- !u!1001 &146570580
 PrefabInstance:
@@ -1023,7 +1053,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2670326096721434121, guid: 41831e35163a6cd4b8ca4c288c2f9f65, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2670326096721434121, guid: 41831e35163a6cd4b8ca4c288c2f9f65, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1366,7 +1396,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &228344306 stripped
 Transform:
@@ -1739,11 +1769,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 297490513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f681f9142f61cd469fbd76bfe909d33, type: 3}
+  m_Script: {fileID: 11500000, guid: 10e7b0936cd9a8341a5bac8327c0f57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 80
+  currentHealth: 80
+  sheep1Stamina: 70
+  maxsheep1Stamina: 70
+  hasRegenerated: 1
+  weareSprinting: 0
+  staminaDrain: 0.5
+  staminaRegen: 0.5
+  slowedSpeed: 3
+  normalSpeed: 6
 --- !u!195 &297490515
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2139,6 +2177,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
   m_PrefabInstance: {fileID: 1277460172}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &369369488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369369487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e7b0936cd9a8341a5bac8327c0f57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 65
+  currentHealth: 65
+  sheep1Stamina: 80
+  maxsheep1Stamina: 80
+  hasRegenerated: 1
+  weareSprinting: 0
+  staminaDrain: 0.3
+  staminaRegen: 0.6
+  slowedSpeed: 6
+  normalSpeed: 12
 --- !u!114 &369369489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2214,20 +2274,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9125977, y: 2.1909819, z: 5.246826}
   m_Center: {x: -0.0019226074, y: 2.6942215, z: 0.305542}
---- !u!114 &369369493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369369487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f681f9142f61cd469fbd76bfe909d33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
 --- !u!4 &386464318 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 482546, guid: 8a13b3dbbf597744192ac4a84ebb93c6, type: 3}
@@ -2463,7 +2509,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &462598001
 PrefabInstance:
@@ -2714,7 +2760,7 @@ Transform:
   - {fileID: 639311667}
   - {fileID: 1108179673}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &483631282
 PrefabInstance:
@@ -3070,6 +3116,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
+  sheep1Stamina: 120
+  maxsheep1Stamina: 120
+  hasRegenerated: 1
+  weareSprinting: 0
+  staminaDrain: 0.5
+  staminaRegen: 0.5
+  slowedSpeed: 4
+  normalSpeed: 8
 --- !u!195 &535153645
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3145,6 +3199,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &535153649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535153643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e7b0936cd9a8341a5bac8327c0f57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 70
+  currentHealth: 70
+  sheep1Stamina: 50
+  maxsheep1Stamina: 50
+  hasRegenerated: 1
+  weareSprinting: 0
+  staminaDrain: 0.3
+  staminaRegen: 0.2
+  slowedSpeed: 5
+  normalSpeed: 10
 --- !u!4 &544770950 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 441750, guid: 802bd3dc24c20394ca2037c1b9c882a0, type: 3}
@@ -3317,7 +3393,7 @@ Transform:
   - {fileID: 520447594}
   - {fileID: 1786599614}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &655933246
 PrefabInstance:
@@ -3579,7 +3655,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5083477060345022582, guid: c70c28f7919e5794fb834e2858f2274b, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5083477060345022582, guid: c70c28f7919e5794fb834e2858f2274b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5142,11 +5218,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1056107658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f681f9142f61cd469fbd76bfe909d33, type: 3}
+  m_Script: {fileID: 11500000, guid: 10e7b0936cd9a8341a5bac8327c0f57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 45
+  currentHealth: 45
+  sheep1Stamina: 65
+  maxsheep1Stamina: 65
+  hasRegenerated: 1
+  weareSprinting: 0
+  staminaDrain: 0.4
+  staminaRegen: 0.8
+  slowedSpeed: 5
+  normalSpeed: 11
 --- !u!195 &1056107660
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5231,7 +5315,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalScale.x
@@ -5255,7 +5339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 707.88
+      value: 705.69
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5287,7 +5371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_Name
-      value: TEST_MAT_SHEEP_06
+      value: Latias
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_TagString
@@ -5536,7 +5620,7 @@ Transform:
   - {fileID: 1488965688}
   - {fileID: 1110070941}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1099004645
 GameObject:
@@ -5703,11 +5787,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1157464313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f681f9142f61cd469fbd76bfe909d33, type: 3}
+  m_Script: {fileID: 11500000, guid: 10e7b0936cd9a8341a5bac8327c0f57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 40
+  currentHealth: 40
+  sheep1Stamina: 75
+  maxsheep1Stamina: 75
+  hasRegenerated: 1
+  weareSprinting: 0
+  staminaDrain: 0.4
+  staminaRegen: 0.8
+  slowedSpeed: 5
+  normalSpeed: 11
 --- !u!195 &1157464315
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6053,7 +6145,37 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1230461493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1230461494}
+  m_Layer: 0
+  m_Name: ~~~~~~SHEEP~~~~~~
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1230461494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230461493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1262205638 stripped
 Transform:
@@ -6272,7 +6394,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &1275717338 stripped
 Transform:
@@ -6345,7 +6467,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalScale.x
@@ -6369,7 +6491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 713.15
+      value: 707.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6401,7 +6523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_Name
-      value: TEST_MAT_SHEEP_01
+      value: Cap
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_TagString
@@ -7077,7 +7199,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1425886865
 GameObject:
@@ -7208,7 +7330,7 @@ RectTransform:
   m_Children:
   - {fileID: 14356256}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7348,7 +7470,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalScale.x
@@ -7364,7 +7486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 151.58
+      value: 153.61
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7372,7 +7494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 708.04
+      value: 710.48
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7404,7 +7526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_Name
-      value: TEST_MAT_SHEEP_05
+      value: Mr. T
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_TagString
@@ -7468,7 +7590,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1499098519 stripped
 Transform:
@@ -7721,7 +7843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4131725583047072, guid: 310b346be14406a469f36ea6987c701d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4131725583047072, guid: 310b346be14406a469f36ea6987c701d, type: 3}
       propertyPath: m_LocalScale.x
@@ -8319,7 +8441,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2670326096721434121, guid: 41831e35163a6cd4b8ca4c288c2f9f65, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2670326096721434121, guid: 41831e35163a6cd4b8ca4c288c2f9f65, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8547,7 +8669,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalScale.x
@@ -8603,7 +8725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_Name
-      value: TEST_MAT_SHEEP_02
+      value: THX
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_TagString
@@ -8709,7 +8831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4050801952498915705, guid: 0d9c2443c2f03174ca8df705c8ad6275, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4050801952498915705, guid: 0d9c2443c2f03174ca8df705c8ad6275, type: 3}
       propertyPath: m_LocalScale.x
@@ -8765,7 +8887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053214869257290449, guid: 0d9c2443c2f03174ca8df705c8ad6275, type: 3}
       propertyPath: m_Name
-      value: First Person Controller Variant
+      value: Shepherd
       objectReference: {fileID: 0}
     - target: {fileID: 4053214869257290449, guid: 0d9c2443c2f03174ca8df705c8ad6275, type: 3}
       propertyPath: m_TagString
@@ -8983,7 +9105,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1733324237
 PrefabInstance:
@@ -9148,7 +9270,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalScale.x
@@ -9204,7 +9326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_Name
-      value: TEST_MAT_SHEEP_03
+      value: Richard
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_TagString
@@ -9436,11 +9558,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1813147337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f681f9142f61cd469fbd76bfe909d33, type: 3}
+  m_Script: {fileID: 11500000, guid: 10e7b0936cd9a8341a5bac8327c0f57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 50
+  currentHealth: 50
+  sheep1Stamina: 65
+  maxsheep1Stamina: 65
+  hasRegenerated: 1
+  weareSprinting: 0
+  staminaDrain: 0.6
+  staminaRegen: 0.6
+  slowedSpeed: 2.5
+  normalSpeed: 5
 --- !u!65 &1813147341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9712,7 +9842,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalScale.x
@@ -9728,7 +9858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 156.03001
+      value: 155.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9736,7 +9866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 707.85
+      value: 707.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9768,7 +9898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_Name
-      value: TEST_MAT_SHEEP_07
+      value: Latios
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_TagString
@@ -9838,6 +9968,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 403954, guid: b7bdd751d1270e14291b000d68d117c1, type: 3}
   m_PrefabInstance: {fileID: 897120164}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1926391654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926391655}
+  m_Layer: 0
+  m_Name: ~~~~~~ENVIRONMENT~~~~~~
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1926391655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926391654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1926689646 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1431301538501030, guid: 310b346be14406a469f36ea6987c701d, type: 3}
@@ -9922,7 +10082,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_LocalScale.x
@@ -9978,7 +10138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_Name
-      value: TEST_MAT_SHEEP_04
+      value: Bessie
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0223f658a0fdd4646b5977324919cc8b, type: 3}
       propertyPath: m_TagString
@@ -10742,7 +10902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4347985818970920083, guid: c0018728331bd49459ee64eb394ee5d9, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4347985818970920083, guid: c0018728331bd49459ee64eb394ee5d9, type: 3}
       propertyPath: m_LocalScale.x
