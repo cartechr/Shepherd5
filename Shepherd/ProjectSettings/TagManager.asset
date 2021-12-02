@@ -8,6 +8,7 @@ TagManager:
   - Coyote
   - waypoint
   - Sheep1
+  - ScatterTrigger
   layers:
   - Default
   - TransparentFX
