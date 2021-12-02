@@ -9,7 +9,15 @@ public class Coyote_Wander : MonoBehaviour
     public NavMeshAgent nav;
     int current = 0;
     int phase = 1;
-    // Update is called once per frame
+    private AudioSource howl;
+    public List<NPC_Follow> sheep;
+    public NPC_Follow current_sheep;
+    private bool hasHowled = false;
+
+    private void Awake()
+    {
+        howl = GetComponent<AudioSource>();
+    }
     void Update()
     {
         switch (phase)
@@ -37,5 +45,21 @@ public class Coyote_Wander : MonoBehaviour
     void SetPhase(int phase)
     {
         //placeholder
+    }
+
+    public void Howl()
+    {
+        if (!hasHowled)
+        {
+            hasHowled = true;
+            howl.Play();
+
+            foreach (var shp in sheep)
+            {
+                Debug.Log("Found a sheep");
+                current_sheep = shp;
+                shp.run_scatter = true;
+            }
+        }
     }
 }

@@ -19,6 +19,8 @@ public class NPC_Follow : MonoBehaviour
     public bool Starving = false;
     public bool Thirsty = false;
     public bool Dead = false;
+    public bool scattering = false;
+    private float ScatterTime = 1f;
     [Tooltip("Amount of food left")]
     public int food = 100;
     [Tooltip("Health Capacity of Food")]
@@ -27,8 +29,9 @@ public class NPC_Follow : MonoBehaviour
     public int water = 100;
     [Tooltip("Health Capacity of Water")]
     public int max_water_cap;
-
-
+    public Transform scatter_point;
+    private float scatter_timer = 1f;
+    public bool run_scatter = false;
     private void Awake()
     {
         sheepHealth = GetComponent<SheepHealth>();
@@ -42,18 +45,39 @@ public class NPC_Follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RunScatter();
         if (water > 40 || food > 80)
         {
             //checks if sheep should follow player or not
             if (follow.followplayer == true)
             {
                 //Follow the player
+                scattering = false;
                 agent.destination = transformToFollow.position;
                 agent.isStopped = false;
             }
-            if (follow.followplayer == false)
+            if (follow.followplayer == false && !scattering)
             {
                 agent.isStopped = true;
+            }
+            if (follow.followplayer == false && scattering)
+            {
+                agent.destination = scatter_point.position;
+            }
+        }
+    }
+
+    void RunScatter()
+    {
+        if (run_scatter)
+        {
+            scatter_timer -= Time.deltaTime;
+            if (scatter_timer <= 0)
+            {
+                follow.followplayer = false;
+                scattering = true;
+                Debug.Log("Scattering");
+                run_scatter = false;
             }
         }
     }
