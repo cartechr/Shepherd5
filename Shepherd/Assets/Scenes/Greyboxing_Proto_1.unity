@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.63855284, g: 0.6146829, b: 0.42541602, a: 1}
+  m_IndirectSpecularColor: {r: 0.63855237, g: 0.61468285, b: 0.42541605, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8888,6 +8888,10 @@ PrefabInstance:
       propertyPath: transformToFollow
       value: 
       objectReference: {fileID: 4050801950874215149}
+    - target: {fileID: 369369490, guid: 4d023dc55d7dbd04891aba6b6e8c446d, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3723661385868899183, guid: 4d023dc55d7dbd04891aba6b6e8c446d, type: 3}
       propertyPath: m_Name
       value: Cap
@@ -8965,6 +8969,10 @@ PrefabInstance:
       propertyPath: transformToFollow
       value: 
       objectReference: {fileID: 4050801950874215149}
+    - target: {fileID: 683283396, guid: 62f9109422c527949a0d6a14d6ded8e6, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3706987477188586422, guid: 62f9109422c527949a0d6a14d6ded8e6, type: 3}
       propertyPath: m_Name
       value: Bessie
@@ -9022,6 +9030,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1157464315, guid: 198b07073608ad246a41474462d065b4, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1157464316, guid: 198b07073608ad246a41474462d065b4, type: 3}
       propertyPath: eat
       value: 
@@ -9455,6 +9467,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1056107660, guid: cce89fb711d721d43b081320b6ad9e7d, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1056107661, guid: cce89fb711d721d43b081320b6ad9e7d, type: 3}
       propertyPath: eat
       value: 
