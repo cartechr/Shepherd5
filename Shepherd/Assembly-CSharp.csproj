@@ -56,6 +56,7 @@
     <Compile Include="Assets\Prefabs\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonMotor.cs" />
     <Compile Include="Assets\Materials\Flocking\scripts\GameManager.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\FirstPersonMovement.cs" />
+    <Compile Include="Assets\Scripts\ShepherdTriggerCheck.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Zoom.cs" />
     <Compile Include="Assets\Scripts\Coyote_Wander.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\FirstPersonAudio.cs" />
@@ -99,7 +100,8 @@
     <Compile Include="Assets\Materials\Flocking\scripts\UiManager.cs" />
     <Compile Include="Assets\Scripts\SheepCollider.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\GroundCheck.cs" />
-    <Compile Include="Assets\Scripts\ShepherdTriggerCheck.cs" />
+    <Compile Include="Assets\Scripts\Lighting_Rotation\LightingPreset.cs" />
+    <Compile Include="Assets\Scripts\Lighting_Rotation\LightingManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\Flocking\Resources\default.xml" />
