@@ -88,3 +88,5 @@ public class LightingManager : MonoBehaviour
         }
     }
 }
+
+// https://www.youtube.com/watch?v=m9hj9PdO328
