@@ -55,14 +55,14 @@
   <ItemGroup>
     <Compile Include="Assets\Prefabs\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonMotor.cs" />
     <Compile Include="Assets\Materials\Flocking\scripts\GameManager.cs" />
-    <Compile Include="Assets\Mini First Person Controller\Scripts\FirstPersonMovement.cs" />
+    <Compile Include="Assets\Prefabs\Mini First Person Controller\Scripts\FirstPersonMovement.cs" />
     <Compile Include="Assets\Scripts\ShepherdTriggerCheck.cs" />
-    <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Zoom.cs" />
+    <Compile Include="Assets\Prefabs\Mini First Person Controller\Scripts\Components\Zoom.cs" />
     <Compile Include="Assets\Scripts\Coyote_Wander.cs" />
-    <Compile Include="Assets\Mini First Person Controller\Scripts\Components\FirstPersonAudio.cs" />
+    <Compile Include="Assets\Prefabs\Mini First Person Controller\Scripts\Components\FirstPersonAudio.cs" />
     <Compile Include="Assets\Scripts\Sheep_Transform.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Mini First Person Controller\Scripts\FirstPersonLook.cs" />
+    <Compile Include="Assets\Prefabs\Mini First Person Controller\Scripts\FirstPersonLook.cs" />
     <Compile Include="Assets\Scripts\Eat_Sys.cs" />
     <Compile Include="Assets\Prefabs\Invector-3rdPersonController_LITE\3D Models\Others\HealthItem\vAnimateUV.cs" />
     <Compile Include="Assets\Scripts\Sheep_HealthSys\Sheep1Health.cs" />
@@ -73,6 +73,7 @@
     <Compile Include="Assets\Prefabs\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonAnimator.cs" />
     <Compile Include="Assets\Scripts\Water_Sys.cs" />
     <Compile Include="Assets\Scripts\Detect_Enemy_Script.cs" />
+    <Compile Include="Assets\Scripts\Lighting_Rotation\LightingManager.cs" />
     <Compile Include="Assets\Prefabs\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonInput.cs" />
     <Compile Include="Assets\Materials\Flocking\scripts\XmlScripts\XmlReadWrite.cs" />
     <Compile Include="Assets\Prefabs\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vPickupItem.cs" />
@@ -80,7 +81,7 @@
     <Compile Include="Assets\Materials\Flocking\scripts\Flocking\Alignment.cs" />
     <Compile Include="Assets\Scripts\NPC_Follow.cs" />
     <Compile Include="Assets\Scripts\Sheep_HealthSys\SheepHealth.cs" />
-    <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Jump.cs" />
+    <Compile Include="Assets\Prefabs\Mini First Person Controller\Scripts\Components\Jump.cs" />
     <Compile Include="Assets\Scripts\Sheep_HealthSys\Sheep_1_HealthBar.cs" />
     <Compile Include="Assets\Materials\Flocking\scripts\Flocking\Separation.cs" />
     <Compile Include="Assets\Scripts\Archived Scripts\Coyote_Script.cs" />
@@ -95,13 +96,12 @@
     <Compile Include="Assets\Scripts\Archived Scripts\Coy_Attack.cs" />
     <Compile Include="Assets\Scripts\Patrol_NPC.cs" />
     <Compile Include="Assets\Prefabs\Invector-3rdPersonController_LITE\Scripts\Camera\vThirdPersonCamera.cs" />
-    <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Crouch.cs" />
+    <Compile Include="Assets\Prefabs\Mini First Person Controller\Scripts\Components\Crouch.cs" />
     <Compile Include="Assets\Scripts\Patrol.cs" />
     <Compile Include="Assets\Materials\Flocking\scripts\UiManager.cs" />
-    <Compile Include="Assets\Scripts\SheepCollider.cs" />
-    <Compile Include="Assets\Mini First Person Controller\Scripts\Components\GroundCheck.cs" />
     <Compile Include="Assets\Scripts\Lighting_Rotation\LightingPreset.cs" />
-    <Compile Include="Assets\Scripts\Lighting_Rotation\LightingManager.cs" />
+    <Compile Include="Assets\Scripts\SheepCollider.cs" />
+    <Compile Include="Assets\Prefabs\Mini First Person Controller\Scripts\Components\GroundCheck.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\Flocking\Resources\default.xml" />

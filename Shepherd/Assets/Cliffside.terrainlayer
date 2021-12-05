@@ -7,8 +7,8 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Cliffside
-  m_DiffuseTexture: {fileID: 2800000, guid: 4d47b7293fe7f484a822fc49a09e2744, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: 4f67815d3cedeb24cb7f53c36e5d589c, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: 49610e60c2112ba428498ab98401a2d6, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 05855b945c86a334e94b65d83f554a9b, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 100, y: 100}
   m_TileOffset: {x: 0, y: 0}
