@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.012
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.24313726, g: 0.3137255, b: 0.8784314, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.3268512, g: 0.4078954, b: 0.6132076, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: ee86f5753821d8b48ae11b0df60a51d1, type: 2}
   m_HaloStrength: 0.335
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.63855237, g: 0.61468285, b: 0.42541605, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -804,7 +804,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.9150943, g: 0.70635116, b: 0.48776254, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -862,7 +862,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144420526}
-  m_LocalRotation: {x: 0.17073682, y: -0.5725247, z: 0.12336591, w: 0.7923668}
+  m_LocalRotation: {x: -0.061628457, y: 0.70441604, z: 0.70441604, w: 0.061628457}
   m_LocalPosition: {x: 0.93, y: 5.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4226,6 +4226,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3948711063652184478, guid: 3f1c5f64fbce48f4996a4c8d46c68b91, type: 3}
   m_PrefabInstance: {fileID: 1834167311}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1049944582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8386349813671631707, guid: 6bea4478972bd8245baa7db52cb2edd9, type: 3}
+  m_PrefabInstance: {fileID: 8386349815164960501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1049944585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049944582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e732b33d7757b4faded415ec7b72ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DirectionalLight: {fileID: 144420527}
+  Preset: {fileID: 11400000, guid: f625438d130bd8b4fb0c0660eab4f223, type: 2}
+  TimeOfDay: 0
+  speedMultiplier: 0.08
+  nightSpeed: 10
+  maxIntensity: 1.5
+  maxShadowStrength: 1
+  minShadowStrength: 0.2
 --- !u!1001 &1050031455
 PrefabInstance:
   m_ObjectHideFlags: 0
